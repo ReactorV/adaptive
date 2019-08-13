@@ -1,0 +1,90 @@
+$minScreenS: 320;
+$minScreenSM: 480;
+$minScreenM: 768;
+$minScreenX: 1024;
+$minScreenL: 1440;
+
+$minScreenXContainer: 1024;
+
+@mixin screen-320 {}
+@mixin screen-480 {}
+
+/*
+@mixin screen-sm {
+  @media screen and (min-width: $minScreenSM + px) and (max-width: $minScreenM - 1 + px) {
+    @content;
+  }
+}
+
+@mixin screen-m {
+  @media screen and (min-width: $minScreenM + px) and (max-width: $minScreenX - 1 + px) {
+    @content;
+  }
+}
+
+@mixin min-screen-m {
+  @media screen and (min-width: $minScreenM + px) {
+    @content;
+  }
+}
+
+@mixin min-screen-x {
+  @media screen and (min-width: $minScreenX + px) {
+    @content;
+  }
+}
+
+@mixin max-screen-s {
+  @media screen and (max-width: $minScreenSM - 1 + px) {
+    @content;
+  }
+}
+
+@mixin max-screen-m {
+  @media screen and (max-width: $minScreenX - 1 + px) {
+    @content;
+  }
+}
+
+@mixin max-screen-l {
+  @media screen and (max-width: $minScreenL - 1 + px) {
+    @content;
+  }
+}
+
+@mixin screen-container-max() {
+  max-width: $minScreenL + px;
+  margin: 0 auto;
+}
+
+@mixin screen-container-min() {
+  max-width: $minScreenS + px;
+  display: flex;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @include screen-m {
+    max-width: $minScreenM + px;
+    padding: 0 40px;
+  }
+
+  @include min-screen-x {
+    width: $minScreenXContainer + px;
+    max-width: $minScreenXContainer + px;
+    padding: 0;
+  }
+}
+
+@mixin screen-container() {
+  margin: 0 auto;
+
+  @include screen-m {
+    max-width: $minScreenM + px;
+  }
+
+  @include min-screen-x {
+    width: $minScreenXContainer + px;
+    max-width: $minScreenXContainer + px;
+  }
+}
+*/

@@ -1,0 +1,11 @@
+@import 'app/styles/index.scss';
+
+.header {
+  background: $color-background;
+  display: flex;
+  align-items: center;
+
+  /*@include max-screen-s {
+
+  }*/
+}
