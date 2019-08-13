@@ -1,8 +1,8 @@
 import React from 'react';
-import Header from 'src/app/components/header';
-import Overview from 'src/app/components/overview';
-import Search from 'src/app/components/search';
-import CardBlock from 'src/app/components/card-block';
+import Header from 'app/components/header';
+import Overview from 'app/components/overview';
+import Search from 'app/components/search';
+import CardBlock from 'app/components/card-block';
 
 import './index.scss';
 

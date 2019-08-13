@@ -1,5 +1,5 @@
 import React from 'react';
-import CardList from 'src/app/components/card-list';
+import CardList from 'app/components/card-list';
 
 import './index.scss';
 

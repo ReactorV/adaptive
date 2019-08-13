@@ -1,5 +1,5 @@
 import React from 'react';
-import Menu from 'src/app/components/header/menu';
+import Menu from 'app/components/header/menu';
 
 import './index.scss';
 
