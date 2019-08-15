@@ -5,7 +5,7 @@ import './index.scss';
 class Search extends React.PureComponent {
     render() {
         return (
-            <div className='search'>
+            <div className="search">
                 Search employee
             </div>
         );

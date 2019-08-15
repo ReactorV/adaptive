@@ -6,7 +6,7 @@ import './index.scss';
 class Header extends React.PureComponent {
     render() {
         return (
-            <div className='header'>
+            <div className="header">
                 <Menu />
             </div>
         );

@@ -1,46 +1,37 @@
 @import 'styles/index';
 
-@mixin padding-margin-320() {
-  padding: 3px 30px;
-  margin: 0 auto;
-  @include font-size-14;
-}
-
 .menu {
-  @include font-size-16;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: flex-start;
-  transition: 0.3s;
 
   @include screen-320 {
-    flex-direction: column;
-    justify-content: center;
+    width: 100%;
   }
 
   @include min-screen-480 {
-    justify-content: space-around;
+    flex-direction: row;
   }
 
   &__link {
+    @include font-size-14;
     text-decoration: none;
-    color: white;
-    padding: 15px;
+    color: #FFFFFF;
+    padding: 4px 32px;
+    cursor: pointer;
+    transition: background-color .4s ease;
 
     @include screen-320 {
-      @include padding-margin-320;
+      width: 100%;
+    }
 
+    @include min-screen-480 {
+      @include font-size-16;
+      padding: 16px;
     }
 
     &:hover {
-      background-color: darkseagreen;
-      cursor: pointer;
-      padding: 15px;
-      transition: background-color 1s ease;
-
-      @include screen-320 {
-        @include padding-margin-320;
-      }
+      background-color: #8FBC8F;
     }
   }
 }

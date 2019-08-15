@@ -5,7 +5,7 @@ import './index.scss';
 class Overview extends React.PureComponent {
     render() {
         return (
-            <div className='overview'>
+            <div className="overview">
                 Company Overview
             </div>
         );

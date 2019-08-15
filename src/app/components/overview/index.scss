@@ -1,14 +1,13 @@
 @import 'styles/index';
 
 .overview {
+  @include font-size-16;
   display: flex;
   color: grey;
-  padding-left: 20px;
-  @include font-size-18;
+  padding: 8px 0 10px 32px;
 
-
-  @include screen-320 {
-    @include font-size-16;
-    padding: 10px 0 10px 20px;
+  @include min-screen-480 {
+    @include font-size-18;
+    padding: 4px 0 4px 32px;
   }
 }

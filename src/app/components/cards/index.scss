@@ -1,29 +1,24 @@
 @import 'styles/index';
 
-@mixin category-style() {
+@mixin category-style {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
   background-color: lightskyblue;
   margin: 20px 0;
-  height: 200px;
+  height: 212px;
   overflow: hidden;
 }
 
 .cards {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
 
   @include screen-320 {
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
   }
-
-  &__category {
-    @include category-style;
 
     &__top-managers {
       @include category-style;
@@ -36,5 +31,4 @@
     &__department {
       @include category-style;
     }
-  }
 }

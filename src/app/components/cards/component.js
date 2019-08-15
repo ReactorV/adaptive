@@ -4,19 +4,31 @@ import persons from 'app/common/data';
 
 import './index.scss';
 
+const baseClassName = 'cards';
+
 class Cards extends React.PureComponent {
+    getClassNames = () => {
+        return {
+            component: baseClassName,
+            topManagers: `${baseClassName}__top-managers`,
+            lineManagers: `${baseClassName}__line-managers`,
+            department: `${baseClassName}__department`
+        };
+    };
+
     render() {
+        const classNames = this.getClassNames();
         const cardsOutput = this.renderCards();
 
         return (
-            <div className='cards'>
-                <div className='cards__category__top-managers'>
+            <div className={classNames.component}>
+                <div className={classNames.topManagers}>
                     {cardsOutput}
                 </div>
-                <div className='cards__category__line-managers'>
+                <div className={classNames.lineManagers}>
                     {cardsOutput}
                 </div>
-                <div className='cards__category__department'>
+                <div className={classNames.department}>
                     {cardsOutput}
                 </div>
             </div>
@@ -24,15 +36,16 @@ class Cards extends React.PureComponent {
     }
 
     renderCards = () => {
-        return persons.map((person) => {
-            let output;
+        let output;
 
-            if (person) {
-                output = <Card person={person} key={person.id}/>;
-            }
+        if (Array.isArray(persons)) {
+            output = persons.map((person, index) => {
+                return <Card person={person}
+                    key={index}/>;
+            });
+        }
 
-            return output;
-        });
+        return output;
     }
 }
 

@@ -5,12 +5,4 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-
-  @include screen-320 {
-    justify-content: center;
-  }
-
-  @include min-screen-480 {
-    justify-content: flex-start;
-  }
 }

@@ -1,67 +1,60 @@
 @import 'styles/index';
 
 .card {
-  @include font-size-12;
-  font-weight: 700;
-  border: 1px solid darkgray;
-  width: 110px;
-  height: 84%;
-  margin: 15px 5px;;
-  background-color: gainsboro;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  @include screen-320 {
-    width: 220px;
-  }
-
-  @include min-screen-480 {
-    width: 180px;
-  }
-
-  @include min-screen-768 {
-    width: 152px;
-  }
-
-  @include min-screen-1024 {
-    width: 148px;
-  }
-
-  @include min-screen-1024 {
-    width: 148px;
-  }
-
-  @include min-screen-1440 {
-    width: 148px;
-  }
-
-  &__icon {
-    border: 1px solid gray;
-    width: 70px;
-    height: 70px;
-    border-radius: 100px;
-    margin-bottom: 10px;
-
-    @include screen-320 {
-        width: 90px;
-        height: 90px;
-    }
+    border: 1px solid #868686;
+    margin: 16px 4px;;
+    background-color: #DCDCDC;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 212px;
+    height: 180px;
 
     @include min-screen-480 {
-      width: 80px;
-      height: 80px;
+        width: 180px;
     }
-  }
 
-  &__name {
-    @include screen-320 {
-      @include font-size-14;
+    @include min-screen-768 {
+        width: 152px;
     }
-  }
 
-  &__position {
-    font-weight: 400;
-  }
+    @include min-screen-1024 {
+        width: 148px;
+    }
+
+    &__link {
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        text-decoration: none;
+      }
+
+    &__icon {
+        border: 1px solid gray;
+        width: 72px;
+        height: 72px;
+        border-radius: 50%;
+        margin: 24px auto 12px auto;
+
+        @include screen-320 {
+            width: 88px;
+            height: 88px;
+        }
+
+        @include min-screen-480 {
+            width: 80px;
+            height: 80px;
+        }
+    }
+
+    &__name {
+        @include font-size-14;
+        font-weight: 700;
+    }
+
+    &__position {
+        @include font-size-12;
+    }
 }

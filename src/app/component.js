@@ -9,7 +9,7 @@ import './index.scss';
 class App extends React.PureComponent {
     render() {
         return (
-            <div className='app'>
+            <div className="app">
                 <Header />
                 <main>
                     <Overview />

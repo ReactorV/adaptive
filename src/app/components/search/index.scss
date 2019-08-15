@@ -1,14 +1,14 @@
 @import 'styles/index';
 
 .search {
+  @include font-size-16;
   display: flex;
-  background-color: lightskyblue;
-  padding-left: 20px;
+  background-color: #DCDCDC;
+  padding: 8px 0 10px 32px;
   margin-bottom: 0;
-  @include font-size-18;
 
-  @include screen-320 {
-    @include font-size-16;
-    padding: 10px 0 10px 20px;
+  @include min-screen-480 {
+    @include font-size-18;
+    padding: 4px 0 4px 32px;
   }
 }
