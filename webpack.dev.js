@@ -8,7 +8,7 @@ module.exports = () => {
     return {
         mode: 'development',
         entry: {
-            app: './src/app/index.js'
+            app: './src/index.js'
         },
         output: {
             path: path.resolve(__dirname, 'dist'),
@@ -41,7 +41,12 @@ module.exports = () => {
                 },
                 {
                     test: /\.scss$/,
-                    use: ['style-loader', 'css-loader', 'sass-loader']
+                    use: ['style-loader', 'css-loader', {
+                        loader: 'sass-loader',
+                        options: {
+                            includePaths: ['src/']
+                        }
+                    }]
                 },
 
                 {
@@ -67,6 +72,12 @@ module.exports = () => {
                     template: './src/index.html'
                 }
             ),
+            new CopyPlugin([
+                {
+                    from: path.join(__dirname, 'src/icons/'),
+                    to: path.join(__dirname, '/icons/')
+                }
+            ]),
 
             new webpack.HotModuleReplacementPlugin()
         ]

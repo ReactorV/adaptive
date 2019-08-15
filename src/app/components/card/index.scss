@@ -1,7 +1,67 @@
+@import 'styles/index';
+
 .card {
+  @include font-size-12;
+  font-weight: 700;
   border: 1px solid darkgray;
   width: 110px;
-  height: 85%;
-  margin: 0 1%;
+  height: 84%;
+  margin: 15px 5px;;
   background-color: gainsboro;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @include screen-320 {
+    width: 220px;
+  }
+
+  @include min-screen-480 {
+    width: 180px;
+  }
+
+  @include min-screen-768 {
+    width: 152px;
+  }
+
+  @include min-screen-1024 {
+    width: 148px;
+  }
+
+  @include min-screen-1024 {
+    width: 148px;
+  }
+
+  @include min-screen-1440 {
+    width: 148px;
+  }
+
+  &__icon {
+    border: 1px solid gray;
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+
+    @include screen-320 {
+        width: 90px;
+        height: 90px;
+    }
+
+    @include min-screen-480 {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &__name {
+    @include screen-320 {
+      @include font-size-14;
+    }
+  }
+
+  &__position {
+    font-weight: 400;
+  }
 }

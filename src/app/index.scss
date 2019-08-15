@@ -1,13 +1,4 @@
-/*@import 'app/styles/index.scss';*/
-
-@mixin font-regular() {
-  font-family: 'JosefinSans-Regular', sans-serif;
-}
-
-@mixin font-size-16() {
-  font-size: 16px;
-  line-height: 20px;
-}
+@import 'styles/index';
 
 *,
 *:before,

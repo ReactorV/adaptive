@@ -1,0 +1,40 @@
+@import 'styles/index';
+
+@mixin category-style() {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: lightskyblue;
+  margin: 20px 0;
+  height: 200px;
+  overflow: hidden;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  @include screen-320 {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  &__category {
+    @include category-style;
+
+    &__top-managers {
+      @include category-style;
+    }
+
+    &__line-managers {
+      @include category-style;
+    }
+
+    &__department {
+      @include category-style;
+    }
+  }
+}

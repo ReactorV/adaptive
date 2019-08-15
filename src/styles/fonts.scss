@@ -13,12 +13,11 @@
 
 @mixin font-size-8() {
   font-size: 8px;
-  line-height: 12px;
 }
 
 @mixin font-size-10() {
   font-size: 10px;
-  line-height: 16px;
+  line-height: 14px;
 }
 
 @mixin font-size-11() {
@@ -38,7 +37,7 @@
 
 @mixin font-size-14() {
   font-size: 14px;
-  line-height: 20px;
+  line-height: 26px;
 }
 
 @mixin font-size-15() {
@@ -48,7 +47,7 @@
 
 @mixin font-size-16() {
   font-size: 16px;
-  line-height: 20px;
+  line-height: 28px;
 }
 
 @mixin font-size-17() {
@@ -58,7 +57,7 @@
 
 @mixin font-size-18() {
   font-size: 18px;
-  line-height: 24px;
+  line-height: 68px;
 }
 
 @mixin font-size-19() {

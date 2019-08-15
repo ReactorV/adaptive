@@ -6,8 +6,61 @@ $minScreenL: 1440;
 
 $minScreenXContainer: 1024;
 
-@mixin screen-320 {}
-@mixin screen-480 {}
+
+@mixin min-screen-480 {
+  @media screen and (min-width: $minScreenSM + px) {
+    @content;
+  }
+}
+
+@mixin min-screen-768 {
+  @media screen and (min-width: $minScreenM + px) {
+    @content;
+  }
+}
+
+@mixin min-screen-1024 {
+  @media screen and (min-width: $minScreenX + px) {
+    @content;
+  }
+}
+
+@mixin min-screen-1440 {
+  @media screen and (min-width: $minScreenL + px) {
+    @content;
+  }
+}
+
+
+@mixin screen-320 {
+  @media screen and (min-width: $minScreenS + px) and (max-width: $minScreenSM - 1 + px) {
+    @content;
+  }
+}
+
+@mixin screen-480 {
+  @media screen and (min-width: $minScreenSM + px) and (max-width: $minScreenM - 1 + px) {
+    @content;
+  }
+}
+
+@mixin screen-768 {
+  @media screen and (min-width: $minScreenM + px) and (max-width: $minScreenX - 1 + px) {
+    @content;
+  }
+}
+
+@mixin screen-1024 {
+  @media screen and (min-width: $minScreenX + px) and (max-width: $minScreenL - 1 + px) {
+    @content;
+  }
+}
+
+@mixin screen-1440 {
+  @media screen and (min-width: $minScreenL + px) {
+    @content;
+  }
+}
 
 /*
 @mixin screen-sm {
