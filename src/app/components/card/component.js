@@ -5,6 +5,8 @@ import './index.scss';
 
 const baseClassName = 'card';
 
+import iconTest from 'icons/Beaviss.png';
+
 class Card extends React.PureComponent {
     getClassNames = () => {
         return {
@@ -24,7 +26,7 @@ class Card extends React.PureComponent {
             <div className={classNames.component}>
                 <a className={classNames.link} href="#">
                     <div className={classNames.icon}>
-                        <img src="" alt=""/>
+                        <img src={iconTest} alt=""/>
                     </div>
                     <div className={classNames.name}>
                         {person.name}

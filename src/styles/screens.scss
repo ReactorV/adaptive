@@ -1,14 +1,13 @@
-$minScreenS: 320;
-$minScreenSM: 480;
+$minScreenXS: 320;
+$minScreenS: 480;
 $minScreenM: 768;
-$minScreenX: 1024;
-$minScreenL: 1440;
+$minScreenL: 1080;
+$minScreenXL: 1440;
 
 $minScreenXContainer: 1024;
 
-
 @mixin min-screen-480 {
-  @media screen and (min-width: $minScreenSM + px) {
+  @media screen and (min-width: $minScreenS + px) {
     @content;
   }
 }
@@ -19,45 +18,45 @@ $minScreenXContainer: 1024;
   }
 }
 
-@mixin min-screen-1024 {
-  @media screen and (min-width: $minScreenX + px) {
+@mixin min-screen-1080 {
+  @media screen and (min-width: $minScreenL + px) {
     @content;
   }
 }
 
 @mixin min-screen-1440 {
-  @media screen and (min-width: $minScreenL + px) {
+  @media screen and (min-width: $minScreenXL + px) {
     @content;
   }
 }
 
 
 @mixin screen-320 {
-  @media screen and (min-width: $minScreenS + px) and (max-width: $minScreenSM - 1 + px) {
+  @media screen and (min-width: $minScreenXS + px) and (max-width: $minScreenS - 1 + px) {
     @content;
   }
 }
 
 @mixin screen-480 {
-  @media screen and (min-width: $minScreenSM + px) and (max-width: $minScreenM - 1 + px) {
+  @media screen and (min-width: $minScreenS + px) and (max-width: $minScreenM - 1 + px) {
     @content;
   }
 }
 
 @mixin screen-768 {
-  @media screen and (min-width: $minScreenM + px) and (max-width: $minScreenX - 1 + px) {
+  @media screen and (min-width: $minScreenM + px) and (max-width: $minScreenL - 1 + px) {
     @content;
   }
 }
 
 @mixin screen-1024 {
-  @media screen and (min-width: $minScreenX + px) and (max-width: $minScreenL - 1 + px) {
+  @media screen and (min-width: $minScreenL + px) and (max-width: $minScreenXL - 1 + px) {
     @content;
   }
 }
 
 @mixin screen-1440 {
-  @media screen and (min-width: $minScreenL + px) {
+  @media screen and (min-width: $minScreenXL + px) {
     @content;
   }
 }
