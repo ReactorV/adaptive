@@ -1,22 +1,15 @@
 import React from 'react';
-import Header from 'app/components/header';
-import Overview from 'app/components/overview';
-import Search from 'app/components/search';
-import Cards from 'app/components/cards';
+import MasterPage from 'app/components/master-page';
+import CardsPage from './pages/cards-page';
 
 import './index.scss';
 
 class App extends React.PureComponent {
     render() {
         return (
-            <div className="app">
-                <Header />
-                <main>
-                    <Overview />
-                    <Search />
-                    <Cards />
-                </main>
-            </div>
+            <MasterPage>
+                <CardsPage />
+            </MasterPage>
         );
     }
 }

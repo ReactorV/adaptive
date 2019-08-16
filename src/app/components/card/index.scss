@@ -9,8 +9,8 @@
     align-items: center;
     justify-content: center;
     width: 212px;
-    height: 180px;
-    box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.2);
+    height: 176px;
+    box-shadow: 0 0 4px 2px rgba(0,0,0,0.2);
 
     @include min-screen-480 {
         width: 180px;

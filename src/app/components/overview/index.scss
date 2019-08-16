@@ -4,10 +4,10 @@
   @include font-size-16;
   display: flex;
   color: grey;
-  padding: 8px 0 10px 32px;
+  padding: 4px 0 8px 32px;
 
   @include min-screen-480 {
     @include font-size-18;
-    padding: 4px 0 4px 32px;
+    padding: 0 0 0 32px;
   }
 }

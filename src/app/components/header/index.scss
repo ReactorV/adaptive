@@ -5,4 +5,22 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+
+  &__button {
+    margin: 8px 15px;
+    padding: 0;
+    border: none;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:active {
+      transform: translateY(1px);
+      filter: saturate(150%);
+    }
+
+    &:hover {
+      background-color: $color-background;
+    }
+  }
 }
