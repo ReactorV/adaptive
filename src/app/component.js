@@ -1,6 +1,6 @@
 import React from 'react';
 import MasterPage from 'app/components/master-page';
-import CardsPage from './pages/cards-page';
+import CardsPage from './pages/employees';
 
 import './index.scss';
 

@@ -1,0 +1,22 @@
+@import 'styles/index';
+
+.employees-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include screen-320 {
+        flex-flow: row wrap;
+    }
+
+    &__category {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        background-color: lightskyblue;
+        margin: 16px 0;
+        height: 208px;
+        overflow: hidden;
+    }
+}

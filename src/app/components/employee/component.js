@@ -1,13 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import iconTest from 'icons/Beaviss.png';
 import './index.scss';
 
-const baseClassName = 'card';
+const baseClassName = 'employee';
 
-import iconTest from 'icons/Beaviss.png';
-
-class Card extends React.PureComponent {
+class Employee extends React.PureComponent {
     getClassNames = () => {
         return {
             component: baseClassName,
@@ -40,11 +38,11 @@ class Card extends React.PureComponent {
     }
 }
 
-Card.propTypes = {
+Employee.propTypes = {
     person: PropTypes.shape({
         name: PropTypes.string,
         position: PropTypes.string
     })
 };
 
-export default Card;
+export default Employee;

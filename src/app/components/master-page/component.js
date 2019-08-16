@@ -1,37 +1,68 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Header from '../header';
-import Footer from 'app/components/footer';
 
 import './index.scss';
+
+import iconMenu from 'icons/menu.png';
+
+const baseClassName = 'page';
+const baseClassNameHeader = 'header';
 
 class MasterPage extends React.PureComponent {
     constructor(props) {
         super(props);
     }
 
+    getClassNames = () => {
+        return {
+            component: baseClassName,
+            content: `${baseClassName}__content`,
+            footer: `${baseClassName}__footer`,
+            header: `${baseClassNameHeader}`,
+            headerButton: `${baseClassNameHeader}__button`
+        };
+    };
+
     render() {
-        /*const outputRender = this.renderFooter();*/
+        const classNames = this.getClassNames();
+
+        const headerOutput = this.renderHeader();
+        const footerOutput = this.renderFooter();
 
         return (
             <>
-                <Header />
-                <div className="page">
-                    <div className="page-content">
+                {headerOutput}
+                <div className={classNames.component}>
+                    <div className={classNames.content}>
                         {this.props.children}
                     </div>
-                    <Footer />
+                    {footerOutput}
                 </div>
             </>
         );
     }
 
-    /*renderFooter() => {
+    renderFooter = () => {
+        const classNames = this.getClassNames();
+
         return (
-
+            <div className={classNames.footer}>
+                Hi! Here will be a footer...
+            </div>
         );
-    }*/
+    };
 
+    renderHeader = () => {
+        const classNames = this.getClassNames();
+
+        return (
+            <div className={classNames.header}>
+                <button className={classNames.headerButton}>
+                    <img src={iconMenu} alt=""/>
+                </button>
+            </div>
+        );
+    }
 }
 
 export default MasterPage;
