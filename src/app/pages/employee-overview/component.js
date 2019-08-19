@@ -1,15 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import AllEmployeesList from 'app/pages/employees/list';
+import EmployeesOverview from 'app/pages/employee-overview/overview';
+import EmployeesSearch from 'app/pages/employee-overview/search';
+import EmployeesList from 'app/pages/employee-overview/list';
 import Preloader from 'app/components/preloader';
 import persons from 'app/common/data';
 
 import './index.scss';
 
-const baseClassName = 'all-employees-page';
+const baseClassName = 'employees-page';
 
-class Employees extends React.PureComponent {
+class EmployeesPage extends React.PureComponent {
     constructor(props) {
         super(props);
 
@@ -20,7 +22,7 @@ class Employees extends React.PureComponent {
     }
 
     componentDidMount() {
-        this.loadAllEmployeesList();
+        this.loadEmployee();
     }
 
     getClassNames = () => {
@@ -42,12 +44,14 @@ class Employees extends React.PureComponent {
 
         return (
             <div className={classNames.component}>
-                <AllEmployeesList employees={employees} />
+                <EmployeesOverview />
+                <EmployeesSearch />
+                <EmployeesList employees={employees} />
             </div>
         );
     }
 
-    loadAllEmployeesList() {
+    loadEmployee() {
         setTimeout(() => {
             this.setState({
                 loading: false,
@@ -57,4 +61,4 @@ class Employees extends React.PureComponent {
     }
 }
 
-export default Employees;
+export default EmployeesPage;

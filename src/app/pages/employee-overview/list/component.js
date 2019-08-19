@@ -5,9 +5,9 @@ import Employee from 'app/components/employee';
 
 import './index.scss';
 
-const baseClassName = 'all-employees-list';
+const baseClassName = 'employees-list';
 
-class AllEmployeesList extends React.PureComponent {
+class EmployeesList extends React.PureComponent {
     constructor(props) {
         super(props);
     }
@@ -29,6 +29,12 @@ class AllEmployeesList extends React.PureComponent {
                 <div className={classNames.category}>
                     {cardsOutput}
                 </div>
+                <div className={classNames.category}>
+                    {cardsOutput}
+                </div>
+                <div className={classNames.category}>
+                    {cardsOutput}
+                </div>
             </div>
         );
     }
@@ -44,8 +50,8 @@ class AllEmployeesList extends React.PureComponent {
     };
 }
 
-AllEmployeesList.propTypes = {
+EmployeesList.propTypes = {
     employees: PropTypes.array
 };
 
-export default AllEmployeesList;
+export default EmployeesList;

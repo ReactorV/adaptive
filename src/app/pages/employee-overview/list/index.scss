@@ -1,8 +1,8 @@
-@import 'styles/index';
+@import '../../../../styles/index';
 
-.all-employees-list {
+.employees-list {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
 
     @include screen-320 {
