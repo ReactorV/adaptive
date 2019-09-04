@@ -2,43 +2,43 @@ const persons = [
     {
         id: '1',
         icon: '',
-        name: 'Name Surname',
-        position: 'Super Manager'
+        name: 'Luke Skywalker',
+        position: 'Developer'
     },
 
     {
         id: '2',
         icon: '',
-        name: 'Name Surname',
+        name: 'Darth Vader',
         position: 'Super Manager'
     },
 
     {
         id: '3',
         icon: '',
-        name: 'Name Surname',
-        position: 'Super Manager'
+        name: 'Leia Organa',
+        position: 'Manager'
     },
 
     {
         id: '4',
         icon: '',
-        name: 'Name Surname',
-        position: 'Super Manager'
+        name: 'Owen Lars',
+        position: 'Middle Developer'
     },
 
     {
         id: '5',
         icon: '',
-        name: 'Name Surname',
+        name: 'Obi-Wan Kenobi',
         position: 'Super Manager'
     },
 
     {
         id: '6',
         icon: '',
-        name: 'Name Surname',
-        position: 'Super Manager'
+        name: 'Biggs Darklighter',
+        position: 'Junior Developer'
     }
 ];
 

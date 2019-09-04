@@ -42,6 +42,7 @@ class Employee extends React.PureComponent {
         const classNames = this.getClassNames();
 
         let linkClassName = classNames.link;
+        const path = `/employee/${person.id}/overview`;
 
         if (active) {
             linkClassName = classNames.linkActive;
@@ -49,7 +50,7 @@ class Employee extends React.PureComponent {
 
         return (
             <div className={classNames.component}>
-                <Link className={linkClassName} to="/employee/id/overview"
+                <Link className={linkClassName} to={path}
                     onClick={this.handleClick}>
                     <div className={classNames.icon}>
                         <img src={iconTest} alt=""/>

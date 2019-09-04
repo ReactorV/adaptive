@@ -9,7 +9,7 @@ import './index.scss';
 
 const baseClassName = 'all-employees-page';
 
-class Employees extends React.PureComponent {
+class EmployeesPage extends React.PureComponent {
     constructor(props) {
         super(props);
 
@@ -57,4 +57,4 @@ class Employees extends React.PureComponent {
     }
 }
 
-export default Employees;
+export default EmployeesPage;

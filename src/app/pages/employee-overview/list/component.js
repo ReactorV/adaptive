@@ -51,7 +51,8 @@ class EmployeesList extends React.PureComponent {
 }
 
 EmployeesList.propTypes = {
-    employees: PropTypes.array
+    employees: PropTypes.array,
+    itemId: PropTypes.string
 };
 
 export default EmployeesList;

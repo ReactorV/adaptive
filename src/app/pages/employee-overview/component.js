@@ -11,7 +11,7 @@ import './index.scss';
 
 const baseClassName = 'employees-page';
 
-class EmployeesPage extends React.PureComponent {
+class EmployeeOverviewPage extends React.PureComponent {
     constructor(props) {
         super(props);
 
@@ -33,6 +33,7 @@ class EmployeesPage extends React.PureComponent {
 
     render() {
         const { loading, employees } = this.state;
+        const { itemId } = this.props;
 
         if (loading) {
             return (
@@ -46,7 +47,10 @@ class EmployeesPage extends React.PureComponent {
             <div className={classNames.component}>
                 <EmployeesOverview />
                 <EmployeesSearch />
-                <EmployeesList employees={employees} />
+                <EmployeesList
+                    employees={employees}
+                    itemId={itemId}
+                />
             </div>
         );
     }
@@ -61,4 +65,8 @@ class EmployeesPage extends React.PureComponent {
     }
 }
 
-export default EmployeesPage;
+EmployeeOverviewPage.propTypes = {
+    itemId: PropTypes.string
+};
+
+export default EmployeeOverviewPage;

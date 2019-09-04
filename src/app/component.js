@@ -1,7 +1,8 @@
 import React from 'react';
 import MasterPage from 'app/components/master-page';
-import EmployeesPage from './pages/employee-overview';
-import Employees from './pages/employees';
+import EmployeeOverviewPage from './pages/employee-overview';
+import EmployeesPage from './pages/employees';
+import HomePage from './pages/home';
 
 import { BrowserRouter, Route } from 'react-router-dom';
 
@@ -12,12 +13,16 @@ class App extends React.PureComponent {
         return (
             <BrowserRouter>
                 <MasterPage>
-                    <Route path="/"
-                        component={Employees}
-                        exact
+                    <Route exact
+                           path="/"
+                           component={HomePage}
                     />
-                    <Route path="/employees" component={Employees} />
-                    <Route path="/employee/id/overview" component={EmployeesPage} />
+                    <Route path="/employees" component={EmployeesPage} />
+                    <Route path="/employee/:id/overview" 
+                            render={({ match }) => {
+                                const { id } = match.params;
+                                return <EmployeeOverviewPage itemId={id}/>
+                            }}/>
                 </MasterPage>
             </BrowserRouter>
         );
